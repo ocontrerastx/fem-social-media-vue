@@ -1,0 +1,106 @@
+{
+  "followers": [
+    {
+      "platform-name": "facebook",
+      "metric": "Followers",
+      "total": 1987,
+      "delta": {
+        "count": 118
+      },
+      "username": "@ocontrerastx"
+    },
+    {
+      "platform-name": "twitter",
+      "metric": "Followers",
+      "total": 18530,
+      "delta": {
+        "count": -264
+      },
+      "username": "@ocontrerastx"
+    },
+    {
+      "platform-name": "instagram",
+      "metric": "Followers",
+      "total": 10540,
+      "delta": {
+        "count": -128
+      },
+      "username": "@ocontrerastx"
+    },
+    {
+      "platform-name": "youtube",
+      "metric": "Subscribers",
+      "total": 17947,
+      "delta": {
+        "count": 188
+      },
+      "username": "@ocontrerastx"
+    }
+  ],
+  "overview": [
+    {
+      "platform-name": "facebook",
+      "total": 381,
+      "metric": "Page Views",
+      "delta": {
+        "percentage": 21
+      }
+    },
+    {
+      "platform-name": "facebook",
+      "total": 418,
+      "metric": "Likes",
+      "delta": {
+        "percentage": -48
+      }
+    },
+    {
+      "platform-name": "instagram",
+      "total": 246,
+      "metric": "Likes",
+      "delta": {
+        "percentage": 46
+      }
+    },
+    {
+      "platform-name": "instagram",
+      "total": 228,
+      "metric": "Profile Views",
+      "delta": {
+        "percentage": 15
+      }
+    },
+    {
+      "platform-name": "twitter",
+      "total": 14,
+      "metric": "Retweets",
+      "delta": {
+        "percentage": -45
+      }
+    },
+    {
+      "platform-name": "twitter",
+      "total": 592,
+      "metric": "Likes",
+      "delta": {
+        "percentage": -23
+      }
+    },
+    {
+      "platform-name": "youtube",
+      "total": 629,
+      "metric": "Likes",
+      "delta": {
+        "percentage": 66
+      }
+    },
+    {
+      "platform-name": "youtube",
+      "total": 635,
+      "metric": "Total Views",
+      "delta": {
+        "percentage": 67
+      }
+    }
+  ]
+}
