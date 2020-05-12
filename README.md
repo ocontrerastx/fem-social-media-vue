@@ -1,6 +1,6 @@
 # Frontend Mentor - Social media dashboard with theme switcher
 
-![Design preview for the Social media dashboard with theme switcher coding challenge](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H)
+![Design preview for the Social media dashboard with theme switcher coding challenge](https://res.cloudinary.com/dz209s6jk/image/upload/v1585840948/Challenges/ftdvklbtn6y7ydjxjjuj.jpg)
 
 ## Welcome! 👋
 
