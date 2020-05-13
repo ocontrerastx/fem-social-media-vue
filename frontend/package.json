@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "serve:be": "json-server --watch ../<server, api, backend>/db.json",
+    "serve:be": "json-server --watch ../backend/db.json",
     "start": "concurrently -p \"[{name}]\" -n \"API,VUE\" -c \"bgBlue.bold,bgGreen.bold\" \"yarn serve:be\" \"yarn serve\""
   },
   "dependencies": {
