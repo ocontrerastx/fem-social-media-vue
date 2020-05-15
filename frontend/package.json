@@ -10,6 +10,7 @@
     "start": "concurrently -p \"[{name}]\" -n \"API,VUE\" -c \"bgBlue.bold,bgGreen.bold\" \"yarn serve:be\" \"yarn serve\""
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
