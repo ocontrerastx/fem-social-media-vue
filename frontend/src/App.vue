@@ -39,12 +39,6 @@ export default {
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 
-// Social Media Platforms
-$facebook: hsl(195, 100%, 50%);
-$twitter: hsl(203, 89%, 53%);
-$instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
-$youtube: hsl(348, 97%, 39%);
-
 // Toogle
 $light-toggle: hsl(230, 22%, 74%);
 $dark-toggle: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));

@@ -5,36 +5,36 @@
       "metric": "Followers",
       "total": 1987,
       "delta": {
-        "count": 118
+        "count": 12
       },
-      "username": "@ocontrerastx"
+      "username": "@nathanf"
     },
     {
       "platform-name": "twitter",
       "metric": "Followers",
-      "total": 18530,
+      "total": 1044,
       "delta": {
-        "count": -264
+        "count": 99
       },
-      "username": "@ocontrerastx"
+      "username": "@nathanf"
     },
     {
       "platform-name": "instagram",
       "metric": "Followers",
-      "total": 10540,
+      "total": 11000,
       "delta": {
-        "count": -128
+        "count": 1099
       },
-      "username": "@ocontrerastx"
+      "username": "@realnathanf"
     },
     {
       "platform-name": "youtube",
       "metric": "Subscribers",
-      "total": 17947,
+      "total": 8239,
       "delta": {
-        "count": 188
+        "count": -144
       },
-      "username": "@ocontrerastx"
+      "username": "Nathan F."
     }
   ],
   "overview": [
