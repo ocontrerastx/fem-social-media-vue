@@ -7,8 +7,12 @@
     <div class="follower__card__total">{{ f.total }}</div>
     <div class="follower__card__metric">{{ f.metric }}</div>
     <div
-      v-bind:class="f.delta.count > 0 ? 'follower__card__total--positive' : 'follower__card__total--negative'"
-    >{{ f.delta.count }} Today</div>
+      class="follower__card__delta"
+      v-bind:class="f.delta.count > 0 ? 'follower__card__delta--positive' : 'follower__card__delta--negative'"
+    >
+      <img v-bind:src="getDeltaArrowIcon(f.delta.count)" />
+      {{ f.delta.count }} Today
+    </div>
   </div>
 </template>
 
@@ -23,6 +27,13 @@ export default {
     getPlatformLogo(name) {
       return require(`../assets/icon-${name}.svg`)
     },
+    getDeltaArrowIcon(delta) {
+      if (delta >= 0) {
+        return require(`../assets/icon-up.svg`)
+      } else {
+        return require(`../assets/icon-down.svg`)
+      }
+    }
   }
 }
 </script>
@@ -74,11 +85,15 @@ $youtube: hsl(348, 97%, 39%);
   font-weight: 700;
 }
 
-.follower__card__total--negative {
+.follower__card__delta {
+  font-weight: 700;
+}
+
+.follower__card__delta--negative {
   color: $bright-red;
 }
 
-.follower__card__total--positive {
+.follower__card__delta--positive {
   color: $lime-green;
 }
 
