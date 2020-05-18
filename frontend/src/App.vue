@@ -52,7 +52,6 @@ $dark-text-white: hsl(0, 0%, 100%);
 
 // Light Theme
 $light-background-white: hsl(0, 0%, 100%);
-$light-background-top-pale-blue: hsl(225, 100%, 98%);
 $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 $light-text-very-dark-blue: hsl(230, 17%, 14%);
 
