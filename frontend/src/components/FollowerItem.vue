@@ -1,27 +1,45 @@
 <template>
-  <div class="follower__card follower__card--twitter">
-    <div>{{ f["platform-name"] }}</div>
+  <div class="follower__card" v-bind:class="getPlatformClass(f['platform-name'])">
+    <!-- <img v-bind:src="getPlatformLogo(f['platform-name'])" /> -->
     <div>{{ f.username }}</div>
     <div class="follower__card__total">{{ f.total }}</div>
     <div class="follower__card__metric">{{ f.metric }}</div>
-    <div>{{ f.delta.count }} Today</div>
+    <div
+      v-bind:class="f.delta.count > 0 ? 'follower__card__total--positive' : 'follower__card__total--negative'"
+    >{{ f.delta.count }} Today</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "FollowerItem",
-  props: ["f"]
+  props: ["f"],
+  methods: {
+    getPlatformClass(name) {
+      const cardClass = 'follower__card--'
+      return cardClass + name;
+    },
+    getPlatformLogo(name) {
+      // const imgFolder = require('../assets/' + name + '.svg')
+      console.log(imgFolder + name + '.svg')
+      return imgFolder + name + '.svg'
+    },
+  }
 }
 </script>
 
 <style scoped lang="scss">
 $light-card-grayish-blue: hsl(227, 47%, 96%);
 
+// Primary
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
 // Social Media Platforms
 $facebook: hsl(195, 100%, 50%);
 $twitter: hsl(203, 89%, 53%);
 $instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+$instagram: hsl(37, 97%, 70%);
 $youtube: hsl(348, 97%, 39%);
 
 .follower__card {
@@ -44,7 +62,7 @@ $youtube: hsl(348, 97%, 39%);
   border-top: 4px solid $twitter;
 }
 
-.follower__card--isntagram {
+.follower__card--instagram {
   border-top: 4px solid $instagram;
 }
 
@@ -55,6 +73,14 @@ $youtube: hsl(348, 97%, 39%);
 .follower__card__total {
   font-size: 56px;
   font-weight: 700;
+}
+
+.follower__card__total--negative {
+  color: $bright-red;
+}
+
+.follower__card__total--positive {
+  color: $lime-green;
 }
 
 .follower__card__metric {
