@@ -10,8 +10,10 @@
       class="follower__card__delta"
       v-bind:class="f.delta.count > 0 ? 'follower__card__delta--positive' : 'follower__card__delta--negative'"
     >
-      <img v-bind:src="getDeltaArrowIcon(f.delta.count)" />
-      {{ f.delta.count }} Today
+      <img
+        v-bind:src="f.delta.count > 0 ? require(`../assets/icon-up.svg`) : require(`../assets/icon-down.svg`)"
+      />
+      {{ Math.abs(f.delta.count) }} Today
     </div>
   </div>
 </template>
