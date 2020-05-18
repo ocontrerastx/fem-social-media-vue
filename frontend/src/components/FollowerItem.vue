@@ -29,13 +29,6 @@ export default {
     getPlatformLogo(name) {
       return require(`../assets/icon-${name}.svg`)
     },
-    getDeltaArrowIcon(delta) {
-      if (delta >= 0) {
-        return require(`../assets/icon-up.svg`)
-      } else {
-        return require(`../assets/icon-down.svg`)
-      }
-    }
   }
 }
 </script>
