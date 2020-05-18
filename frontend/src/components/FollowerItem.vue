@@ -1,7 +1,9 @@
 <template>
   <div class="follower__card" v-bind:class="getPlatformClass(f['platform-name'])">
-    <!-- <img v-bind:src="getPlatformLogo(f['platform-name'])" /> -->
-    <div>{{ f.username }}</div>
+    <div>
+      <img v-bind:src="getPlatformLogo(f['platform-name'])" />
+      {{ f.username }}
+    </div>
     <div class="follower__card__total">{{ f.total }}</div>
     <div class="follower__card__metric">{{ f.metric }}</div>
     <div
@@ -16,13 +18,10 @@ export default {
   props: ["f"],
   methods: {
     getPlatformClass(name) {
-      const cardClass = 'follower__card--'
-      return cardClass + name;
+      return `follower__card--${name}`
     },
     getPlatformLogo(name) {
-      // const imgFolder = require('../assets/' + name + '.svg')
-      console.log(imgFolder + name + '.svg')
-      return imgFolder + name + '.svg'
+      return require(`../assets/icon-${name}.svg`)
     },
   }
 }
