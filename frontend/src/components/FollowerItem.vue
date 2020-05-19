@@ -1,7 +1,7 @@
 <template>
-  <div class="follower__card" v-bind:class="getPlatformClass(f['platform-name'])">
+  <div class="follower__card" v-bind:class="`follower__card--${f['platform-name']}`">
     <div>
-      <img v-bind:src="getPlatformLogo(f['platform-name'])" />
+      <img v-bind:src="require(`../assets/icon-${f['platform-name']}.svg`)" />
       {{ f.username }}
     </div>
     <div class="follower__card__total">{{ f.total }}</div>
@@ -23,14 +23,9 @@ export default {
   name: "FollowerItem",
   props: ["f"],
   methods: {
-    getPlatformClass(name) {
-      return `follower__card--${name}`
-    },
-    getPlatformLogo(name) {
-      return require(`../assets/icon-${name}.svg`)
-    },
+    }
   }
-}
+
 </script>
 
 <style scoped lang="scss">
