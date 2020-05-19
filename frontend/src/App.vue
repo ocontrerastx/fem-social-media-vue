@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <Followers v-bind:followers="followers" />
+    <Overview v-bind:overview="overview" />
   </div>
 </template>
 
 <script>
 import Followers from "./components/Followers.vue";
+import Overview from "./components/Overview.vue";
 import axios from 'axios';
+
 export default {
   name: "App",
   components: {
-    Followers
+    Followers, 
+    Overview,
   },
   data() {
     return {
@@ -22,6 +26,13 @@ export default {
     axios.get('http://localhost:3000/followers')
     .then(response => {
       this.followers = response.data
+    })
+    .catch(e => {
+      this.errors.push(e)
+    }),
+    axios.get('http://localhost:3000/overview')
+    .then(response => {
+      this.overview = response.data
     })
     .catch(e => {
       this.errors.push(e)
@@ -64,5 +75,11 @@ $light-text-very-dark-blue: hsl(230, 17%, 14%);
 body {
   font-family: Inter, sans-serif;
   background: $light-background-white;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
