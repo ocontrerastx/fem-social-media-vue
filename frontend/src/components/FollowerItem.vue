@@ -1,6 +1,6 @@
 <template>
   <div class="follower__card" v-bind:class="`follower__card--${f['platform-name']}`">
-    <div>
+    <div class="follower__card__identity">
       <img v-bind:src="require(`../assets/icon-${f['platform-name']}.svg`)" />
       {{ f.username }}
     </div>
@@ -69,12 +69,24 @@ $youtube: hsl(348, 97%, 39%);
   border-top: 4px solid $youtube;
 }
 
+.follower__card__identity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+
+.follower__card__identity > img {
+  margin-right: 8px;
+}
+
 .follower__card__total {
   font-size: 56px;
   font-weight: 700;
 }
 
 .follower__card__delta {
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -90,5 +102,6 @@ $youtube: hsl(348, 97%, 39%);
   font-size: 12px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 </style>
