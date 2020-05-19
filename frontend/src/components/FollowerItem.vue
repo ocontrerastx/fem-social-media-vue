@@ -36,7 +36,7 @@ $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 
 // Social Media Platforms
-$facebook: hsl(195, 100%, 50%);
+$facebook: hsl(208, 92%, 53%);
 $twitter: hsl(203, 89%, 53%);
 $instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
 $instagram: hsl(37, 97%, 70%);
@@ -48,7 +48,6 @@ $youtube: hsl(348, 97%, 39%);
   align-items: center;
   height: 216px;
   width: 256px;
-  margin: 0 15px;
   background-color: $light-card-grayish-blue;
   border-radius: 5px;
   padding: 32px 0 24px;

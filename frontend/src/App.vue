@@ -75,6 +75,7 @@ $light-text-very-dark-blue: hsl(230, 17%, 14%);
 body {
   font-family: Inter, sans-serif;
   background: $light-background-white;
+  color: $light-text-very-dark-blue;
 }
 
 #app {

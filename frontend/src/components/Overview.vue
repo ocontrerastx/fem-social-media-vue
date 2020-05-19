@@ -22,17 +22,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$light-text-dark-grayish-blue: hsl(228, 12%, 44%);
+
 .overview__title {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 24px;
+  color: $light-text-dark-grayish-blue;
 }
 
 .overview {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 1150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
   // margin: 0 165px 0;
 }
 </style>

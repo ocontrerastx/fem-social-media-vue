@@ -26,6 +26,7 @@ export default {
 
 <style scoped lang="scss">
 $light-background-top-pale-blue: hsl(225, 100%, 98%);
+$light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 
 // .top__background {
 //   position: absolute;
@@ -47,11 +48,13 @@ $light-background-top-pale-blue: hsl(225, 100%, 98%);
 
 .header__total__followers {
   margin-bottom: 46px;
+  color: $light-text-dark-grayish-blue;
 }
 
 .followers {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
   margin-bottom: 48px;
 }
 </style>

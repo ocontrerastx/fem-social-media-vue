@@ -32,8 +32,8 @@ $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 
 .overview__card {
+  border-radius: 5px;
   padding: 26px 24px 30px 20px;
-  margin: 0 15px 30px;
   width: 254px;
   height: 124px;
   background: $light-card-grayish-blue;
