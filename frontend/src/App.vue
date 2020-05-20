@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-@import "./css/theme.css";
 
 // Primary
 $lime-green: hsl(163, 72%, 41%);
@@ -83,5 +82,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // justify-content: center;
 }
 </style>

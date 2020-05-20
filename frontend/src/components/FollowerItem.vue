@@ -1,7 +1,10 @@
 <template>
   <div class="follower__card" v-bind:class="`follower__card--${f['platform-name']}`">
     <div class="follower__card__identity">
-      <img v-bind:src="require(`../assets/icon-${f['platform-name']}.svg`)" />
+      <img
+        v-bind:src="require(`../assets/icon-${f['platform-name']}.svg`)"
+        v-bind:alt="f['platform-name']"
+      />
       {{ f.username }}
     </div>
     <div class="follower__card__total">{{ f.total }}</div>

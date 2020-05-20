@@ -1,12 +1,12 @@
 <template>
-  <div class="top__background">
+  <div>
     <div class="header">
       <div class="header__title">Social Media Followers</div>
       <div class="header__total__followers">Total Followers: 23,004</div>
-      <div class="followers">
-        <div v-for="(f, index) in followers" v-bind:key="index">
-          <FollowerItem v-bind:f="f" />
-        </div>
+    </div>
+    <div class="followers">
+      <div v-for="(f, index) in followers" v-bind:key="index">
+        <FollowerItem v-bind:f="f" />
       </div>
     </div>
   </div>
@@ -37,7 +37,6 @@ $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 // }
 
 .header {
-  padding: 0 165px 0;
   margin-top: 38px;
 }
 
@@ -53,8 +52,24 @@ $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 
 .followers {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin-bottom: 48px;
+}
+
+@media screen and (max-width: 1180px) {
+  .followers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .followers {
+    grid-template-columns: 1fr;
+  }
+
+  .header__title {
+    font-size: 24px;
+  }
 }
 </style>

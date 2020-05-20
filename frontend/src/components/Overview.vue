@@ -33,8 +33,19 @@ $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 
 .overview {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
-  // margin: 0 165px 0;
+}
+
+@media screen and (max-width: 1180px) {
+  .overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .overview {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
