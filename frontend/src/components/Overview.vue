@@ -47,5 +47,9 @@ $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
   .overview {
     grid-template-columns: 1fr;
   }
+
+  .overview__title {
+    font-size: 18px;
+  }
 }
 </style>

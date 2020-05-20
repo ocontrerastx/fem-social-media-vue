@@ -69,7 +69,7 @@ $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
   }
 
   .header__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 </style>
