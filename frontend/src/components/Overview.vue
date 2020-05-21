@@ -22,8 +22,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$light-text-dark-grayish-blue: hsl(228, 12%, 44%);
-
 .overview__title {
   font-size: 24px;
   font-weight: 700;

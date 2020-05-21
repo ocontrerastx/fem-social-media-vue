@@ -27,12 +27,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$light-card-grayish-blue: hsl(227, 47%, 96%);
-
-// Primary
-$lime-green: hsl(163, 72%, 41%);
-$bright-red: hsl(356, 69%, 56%);
-
 .overview__card {
   border-radius: 5px;
   padding: 26px 24px 30px 20px;

@@ -7,7 +7,7 @@
       />
       {{ f.username }}
     </div>
-    <div class="follower__card__total">{{ f.total }}</div>
+    <div class="follower__card__total">{{ f.total | trim }}</div>
     <div class="follower__card__metric">{{ f.metric }}</div>
     <div
       class="follower__card__delta"
@@ -25,26 +25,21 @@
 export default {
   name: "FollowerItem",
   props: ["f"],
-  methods: {
+  filters: {
+    trim: function (total) {
+    if (total > 9999) {
+      console.log(total);
+      const totalString = total.toString(); 
+      return `${totalString.substr(0,2)}k`
+    }
+    return total;
+  }
     }
   }
 
 </script>
 
 <style scoped lang="scss">
-$light-card-grayish-blue: hsl(227, 47%, 96%);
-
-// Primary
-$lime-green: hsl(163, 72%, 41%);
-$bright-red: hsl(356, 69%, 56%);
-
-// Social Media Platforms
-$facebook: hsl(208, 92%, 53%);
-$twitter: hsl(203, 89%, 53%);
-$instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
-$instagram: hsl(37, 97%, 70%);
-$youtube: hsl(348, 97%, 39%);
-
 .follower__card {
   display: flex;
   flex-direction: column;
@@ -64,8 +59,20 @@ $youtube: hsl(348, 97%, 39%);
   border-top: 4px solid $twitter;
 }
 
+.follower__card--instagram::before {
+  content: "";
+  border-radius: 5px 5px 0 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $instagram;
+}
+
 .follower__card--instagram {
-  border-top: 4px solid $instagram;
+  position: relative;
 }
 
 .follower__card--youtube {

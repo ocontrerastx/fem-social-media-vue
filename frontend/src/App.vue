@@ -46,26 +46,6 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-// Primary
-$lime-green: hsl(163, 72%, 41%);
-$bright-red: hsl(356, 69%, 56%);
-
-// Toogle
-$light-toggle: hsl(230, 22%, 74%);
-$dark-toggle: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
-
-// Dark Theme
-$dark-background-very-dark-blue: hsl(230, 17%, 14%);
-$dark-background-top-very-dark-blue: hsl(232, 19%, 15%);
-$dark-card-desaturated-blue: hsl(228, 28%, 20%);
-$dark-text-desaturated-blue: hsl(228, 34%, 66%);
-$dark-text-white: hsl(0, 0%, 100%);
-
-// Light Theme
-$light-background-white: hsl(0, 0%, 100%);
-$light-text-dark-grayish-blue: hsl(228, 12%, 44%);
-$light-text-very-dark-blue: hsl(230, 17%, 14%);
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -78,10 +58,23 @@ body {
   color: $light-text-very-dark-blue;
 }
 
+#app::before {
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: $light-background-top-very-pale-blue;
+  width: 100%;
+  height: 244px;
+  position: absolute;
+  border-radius: 0 0 25px 25px;
+}
+
 #app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 </style>

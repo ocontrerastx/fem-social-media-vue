@@ -25,17 +25,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$light-background-top-pale-blue: hsl(225, 100%, 98%);
-$light-text-dark-grayish-blue: hsl(228, 12%, 44%);
-
-// .top__background {
-//   position: absolute;
-//   background-color: $light-background-top-pale-blue;
-//   width: 100%;
-//   height: 244px;
-//   border-radius: 0 0 25px 25px;
-// }
-
 .header {
   margin-top: 38px;
 }
