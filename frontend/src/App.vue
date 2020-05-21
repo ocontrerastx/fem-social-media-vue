@@ -77,4 +77,10 @@ body {
   position: relative;
   z-index: 3;
 }
+
+@media screen and (max-width: 600px) {
+  #app::before {
+    display: none;
+  }
+}
 </style>

@@ -6,6 +6,7 @@
         <div class="header__text__total__followers">Total Followers: 23,004</div>
       </div>
       <div class="theme__toggle">
+        <span class="theme_toggle__text">Dark Mode</span>
         <input type="checkbox" id="toggle" class="checkbox" />
         <label for="toggle" class="switch"></label>
       </div>
@@ -41,6 +42,19 @@ export default {
 .header__text__title {
   font-size: 26px;
   font-weight: 700;
+}
+
+.theme__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme_toggle__text {
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 12px;
+  color: $light-text-dark-grayish-blue;
 }
 
 .switch {
@@ -94,12 +108,43 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .followers {
-    grid-template-columns: 1fr;
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
   }
 
-  .header__title {
-    font-size: 20px;
+  .header__text__title {
+    font-size: 22px;
+  }
+
+  .header__text__total__followers {
+    margin-bottom: 24px;
+  }
+
+  .theme__toggle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: $light-card-grayish-blue;
+  }
+
+  .theme__toggle {
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .followers {
+    grid-template-columns: 1fr;
   }
 }
 </style>

@@ -28,7 +28,6 @@ export default {
   filters: {
     trim: function (total) {
     if (total > 9999) {
-      console.log(total);
       const totalString = total.toString(); 
       return `${totalString.substr(0,2)}k`
     }
