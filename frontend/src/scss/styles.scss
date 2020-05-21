@@ -16,6 +16,10 @@ $dark-background-top-very-dark-blue: hsl(232, 19%, 15%);
 $dark-card-desaturated-blue: hsl(228, 28%, 20%);
 $dark-text-desaturated-blue: hsl(228, 34%, 66%);
 $dark-text-white: hsl(0, 0%, 100%);
+$dark-toggle-blue: hsl(210, 78%, 56%);
+$dark-toggle-green: hsl(146, 68%, 55%);
+$dark-toggle: linear-gradient(to right, $dark-toggle-blue, $dark-toggle-green);
+
 
 // Light Theme
 $light-background-white: hsl(0, 0%, 100%);
@@ -23,3 +27,4 @@ $light-background-top-very-pale-blue: hsl(225, 100%, 98%);
 $light-card-grayish-blue: hsl(227, 47%, 96%);
 $light-text-dark-grayish-blue: hsl(228, 12%, 44%);
 $light-text-very-dark-blue: hsl(230, 17%, 14%);
+$light-toggle: hsl(230, 22%, 74%);
