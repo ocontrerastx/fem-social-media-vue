@@ -5,11 +5,11 @@
         <div class="header__text__title">Social Media Followers</div>
         <div class="header__text__total__followers">Total Followers: 23,004</div>
       </div>
-      <div class="theme__toggle">
+      <!-- <div class="theme__toggle">
         <span class="theme_toggle__text">Dark Mode</span>
         <input type="checkbox" id="toggle" class="checkbox" />
         <label for="toggle" class="switch"></label>
-      </div>
+      </div>-->
     </div>
     <div class="followers">
       <div v-for="(f, index) in followers" v-bind:key="index">
