@@ -8,38 +8,38 @@
 <script>
 import Followers from "./components/Followers.vue";
 import Overview from "./components/Overview.vue";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "App",
   components: {
-    Followers, 
+    Followers,
     Overview,
   },
   data() {
     return {
       followers: [],
       overview: [],
-    }
+    };
   },
   created() {
-    axios.get('https://5ecefd5b61c8480016701b1f.mockapi.io/followers')
-    .then(response => {
-      this.followers = response.data
-    })
-    .catch(e => {
-      this.errors.push(e)
-    }),
-    axios.get('https://5ecefd5b61c8480016701b1f.mockapi.io/overview')
-    .then(response => {
-      this.overview = response.data
-    })
-    .catch(e => {
-      this.errors.push(e)
-    })
+    axios
+      .get("https://5ecefd5b61c8480016701b1f.mockapi.io/followers")
+      .then((response) => {
+        this.followers = response.data;
+      })
+      .catch((e) => {
+        this.errors.push(e);
+      }),
+      axios
+        .get("https://5ecefd5b61c8480016701b1f.mockapi.io/overview")
+        .then((response) => {
+          this.overview = response.data;
+        })
+        .catch((e) => {
+          this.errors.push(e);
+        });
   },
-
-
 };
 </script>
 
