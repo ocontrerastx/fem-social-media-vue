@@ -23,14 +23,14 @@ export default {
     }
   },
   created() {
-    axios.get('http://localhost:3000/followers')
+    axios.get('https://5ecefd5b61c8480016701b1f.mockapi.io/followers')
     .then(response => {
       this.followers = response.data
     })
     .catch(e => {
       this.errors.push(e)
     }),
-    axios.get('http://localhost:3000/overview')
+    axios.get('https://5ecefd5b61c8480016701b1f.mockapi.io/overview')
     .then(response => {
       this.overview = response.data
     })
